@@ -1,0 +1,41 @@
+* flycheck-syslogngconf
+flycheck module for syslog-ng configuration files
+
+* Installation
+** Using package manager
+Add this line to your emacs configuration:
+
+#+BEGIN_SRC emacs-lisp
+(add-to-list 'package-archives
+	     '("bagolyodu" . "https://bagolyodu.dyndns.hu/emacs-packages/") t)
+#+END_SRC
+
+Then you can install flycheck-syslogngconf via package manager. For example with use-package module:
+
+#+BEGIN_SRC emacs-lisp
+(use-package flycheck-syslogngconf :ensure t)
+#+END_SRC
+
+** Using git clone
+#+BEGIN_SRC emacs-lisp
+(use-package flycheck-syslogngconf
+  :load-path  "<path to the git clone>")
+#+END_SRC
+
+** Enable flycheck mode
+To enable flycheck globally:
+#+BEGIN_SRC emacs-lisp
+(global-flycheck-mode)
+#+END_SRC
+
+To enable manually
+#+BEGIN_EXAMPLE
+M-x flycheck-mode
+#+END_EXAMPLE
+
+* Overriding the executable
+If syslog-ng is installed to a non-standard location, you can specify the binary location using:
+
+#+BEGIN_SRC emacs-lisp
+(set-variable 'flycheck-syslogngconf-executable "<path of the syslog-ng binary>")
+#+END_SRC
