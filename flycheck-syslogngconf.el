@@ -1,4 +1,4 @@
-;;; flycheck-syslogngconf --- flycheck module for syslog-ng configuration file
+;;; flycheck-syslogngconf.el --- flycheck module for syslog-ng configuration file
 
 ;;; Commentary:
 ;; syslog-ng config syntax checker module
