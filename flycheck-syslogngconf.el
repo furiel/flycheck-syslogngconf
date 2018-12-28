@@ -1,6 +1,7 @@
 ;;; flycheck-syslogngconf.el --- flycheck module for syslog-ng configuration file
 
 ;; Author: Antal Nemes
+;; Package-Requires: ((flycheck))
 ;; Version: 0.0.1
 ;; Package-version: 20181228
 
