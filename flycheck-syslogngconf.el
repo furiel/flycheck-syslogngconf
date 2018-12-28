@@ -1,5 +1,9 @@
 ;;; flycheck-syslogngconf.el --- flycheck module for syslog-ng configuration file
 
+;; Author: Antal Nemes
+;; Version: 0.0.1
+;; Package-version: 20181228
+
 ;;; Commentary:
 ;; syslog-ng config syntax checker module
 ;; To override executable, you can use
