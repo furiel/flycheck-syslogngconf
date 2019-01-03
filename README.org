@@ -1,6 +1,8 @@
 * flycheck-syslogngconf
 flycheck module for syslog-ng configuration files
 
+syslogngconf-mode is hard dependency. For details, please check [[https://github.com/furiel/syslogngconf-mode][syslogngconf-mode]].
+
 * Installation
 ** Using package manager
 Add this line to your emacs configuration:

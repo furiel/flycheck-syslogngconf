@@ -1,9 +1,9 @@
 ;;; flycheck-syslogngconf.el --- flycheck module for syslog-ng configuration file
 
 ;; Author: Antal Nemes
-;; Package-Requires: ((flycheck))
+;; Package-Requires: ((flycheck) (syslogngconf-mode))
 ;; Version: 0.0.1
-;; Package-version: 20181228
+;; Package-version: 20190103
 
 ;;; Commentary:
 ;; syslog-ng config syntax checker module
@@ -13,6 +13,7 @@
 ;;; Code:
 
 (require 'flycheck)
+(require 'syslogngconf-mode)
 
 (flycheck-define-checker syslogngconf
   "A syslog-ng config syntax checker using the syslog-ng binary.
@@ -24,7 +25,7 @@
           line ":" (one-or-more digit) "-" (one-or-more digit) ":" (one-or-more digit) ":" line-end)
    (error line-start (message) " from " (file-name) ":"
           line ":" (one-or-more digit) "-" (one-or-more digit) ":" (one-or-more digit) ":" line-end))
-  :modes (conf-space-mode conf-unix-mode))
+  :modes (syslogngconf-mode))
 
 (add-to-list 'flycheck-checkers 'syslogngconf t)
 
