@@ -41,3 +41,11 @@ If syslog-ng is installed to a non-standard location, you can specify the binary
 #+BEGIN_SRC emacs-lisp
 (set-variable 'flycheck-syslogngconf-executable "<path of the syslog-ng binary>")
 #+END_SRC
+
+For example:
+#+BEGIN_SRC emacs-lisp
+  (add-hook 'syslogngconf-mode-hook
+            (lambda () (set-variable
+                        'flycheck-syslogngconf-executable
+                        (concat (syslogng-autodetect-root) "/sbin/syslog-ng" ))))
+#+END_SRC
